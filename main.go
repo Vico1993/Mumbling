@@ -12,7 +12,7 @@ func accum(s string) {
 	for i, l := range arrString {
 		var buffer bytes.Buffer
 		for j := 1; j <= i+1; j++ {
-			buffer.WriteString(l)
+			buffer.WriteString(strings.ToLower(l))
 		}
 		result[i] = strings.Title(buffer.String())
 	}
