@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func accum(s string) {
+func accum(s string) string {
 	result := make([]string, len(s))
 	arrString := strings.SplitAfter(s, "")
 	for i, l := range arrString {
@@ -16,11 +16,11 @@ func accum(s string) {
 		}
 		result[i] = strings.Title(buffer.String())
 	}
-	fmt.Println(strings.Join(result, "-"))
+	return strings.Join(result, "-")
 }
 
 func main() {
-	accum("abcd")
-	accum("RqaEzty")
-	accum("cwAt")
+	fmt.Println(accum("abcd"))
+	fmt.Println(accum("RqaEzty"))
+	fmt.Println(accum("cwAt"))
 }
